@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <!--Navigation div, usando justify-dontent-end le nav-item si spostono alla fine-->
+        <!--Navigation div, usando justify-content-end le nav-item si spostono alla fine-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Bool Factory</a>
@@ -32,9 +32,9 @@
         </nav>
     </header>
 
-    <main class="container mt-3 ">
-        <!-- div della form-->
-        <div class="row justify-content-sm-center">
+    <main class="container mt-3">
+        <div class="row">
+            <!-- div della form-->
             <div class="col-sm-3 col-md-6">
                 <h3>Richiesta preventivo</h3>
                 <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
@@ -88,36 +88,38 @@
                             </div>
                         </div>
                         <!-- usando class row per mandare a capo il Prezzo finale per lo schermo sm-->
-                        <div class="row  d-flex justify-content-sm-center p-sm-3">
-                            <div class="col-sm-5">
-                                <button type="submit" class="btn btn-primary">Calcola preventivo</button>
-                            </div>
-                            <div class="col-sm-3">
-                                <p> <b>Prezzo finale </b>  <br> 200,00 euro
-                                </p>
+                         <div class="container text-center">
+                            <div class="row justify-content-sm-center mb-3 mt-3">
+                                <div class="col-sm-5">
+                                    <button type="submit" class="btn btn-primary">Calcola preventivo</button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p> <b>Prezzo finale </b>  <br> 200,00 euro
+                                    </p>
+                                </div>
                             </div>
                         </div>
                 </form>
             </div>
             <!-- div della card -->
             <div class="col-sm-3 col-md-6">
-                <div class="card mb-2" style="width: 18rem;">
-                    <!-- non uso nessuna img ma il bg-secondary per farlo griggio il background-->
-                    <img src="..." class="card-img-top bg-secondary-subtle text-white text-center p-5" alt="300x200" >
-                    <div class="card-body">
-                        <h5 class="card-title">I nostri contatti</h5>
-                        <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+                        <div class="card mb-2" style="width: 18rem;">
+                            <!-- non uso nessuna img ma il bg-secondary per farlo griggio il background-->
+                            <img src="..." class="card-img-top bg-secondary-subtle text-white text-center p-5" alt="300x200" >
+                            <div class="card-body">
+                                <h5 class="card-title">I nostri contatti</h5>
+                                <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">help@boolfactory.test</li>
+                                <li class="list-group-item">+1122334455</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Help desk</a>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">help@boolfactory.test</li>
-                        <li class="list-group-item">+1122334455</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Help desk</a>
-                    </div>
-                </div>
-            </div>
-      </div>
+        </div>
     </main>
     
     <footer>
