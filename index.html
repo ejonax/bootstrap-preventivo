@@ -40,50 +40,65 @@
                 <h3>Richiesta preventivo</h3>
                 <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
                 <form>
+                        <!-- row Nome-->
                         <div class="row">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nome</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci il nome">
                             </div>
                         </div>
+                        <!-- row Cognome-->
                         <div class="row">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput2" class="form-label">Cognome</label>
                                     <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Inserisci il cognome">
                                 </div>
                         </div>
+                        <!-- row Email-->
                         <div class="row">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput3" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="name@example.com">
                                 </div>
                         </div>
+                        <!-- row Tipo di Lavoro-->
                         <div class="row">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput4" class="form-label">Tipo di Lavoro</label>
                                 <select class="form-select" id="exampleFormControlInput4">
-                                    <!--come primo step le scriviamo manualmente le opsioni della select-->
-                                  <!-- 
+                                    <!--come primo step le scriviamo manualmente le opsioni della select
                                     <option selected>Seleziona il tipo di lavoro</option>
                                     <option value="1">Backed Development</option>
                                     <option value="2">Frontend Development</option>
                                     <option value="3">Project Analysis</option>
                                     --> 
                                 </select>
+                                <div id="validationServer04Feedback" class="invalid-feedback">
+                                    Please select a valid state.
+                                  </div>
                             </div>
                         </div>
+                        <!-- row Textarea-->
                         <div class="row">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput6" class="form-label">Textarea con Bootstrap5</label>
                                 <textarea class="form-control" id="exampleFormControlInput6" rows="3" placeholder="Inserisci eventuali note"></textarea>
                             </div>
                         </div>
+                        <!-- row Promozione-->
                         <div class="row">
                             <div class="mb-3">
                                 <label for="exampleFormControlInput5" class="form-label">Codice promozionale (opzionale)</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput5">
+                                <input type="text" class="form-control" id="exampleFormControlInput5" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid promotion!
+                                  </div>
+                                  <div class="valid-feedback">
+                                    Your promotion is valid and will be used for final price calculation!
+                                  </div>
                             </div>
                         </div>
+                        <!-- row Privacy Policy-->
                         <div class="row">
                             <div class="mb-3">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -92,12 +107,14 @@
                         </div>
                         <!-- usando class row per mandare a capo il Prezzo finale per lo schermo sm-->
                         <div class="container text-center">
+                            <!-- row Button-->
                             <div class="row justify-content-sm-center">
                                 <div class="col-sm-5 mb-3 mt-sm-3">
                                     <button id="submit-form" type="submit" class="btn btn-primary">Calcola preventivo</button>
                                 </div>
                                 <div class="col-sm-3 mb-3 mt-sm-3">
-                                    <p> <b>Prezzo finale </b>  <br> 200,00 euro
+                                    <p><b>Prezzo finale</b><br>
+                                      <span id="finalPrice"></span> &euro;
                                     </p>
                                 </div>
                             </div>
