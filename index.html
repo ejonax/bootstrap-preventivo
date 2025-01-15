@@ -45,6 +45,9 @@
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nome</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Inserisci il nome">
+                                <div class="invalid-feedback">
+                                    Please provide a name!
+                                  </div>
                             </div>
                         </div>
                         <!-- row Cognome-->
@@ -52,6 +55,9 @@
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput2" class="form-label">Cognome</label>
                                     <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Inserisci il cognome">
+                                    <div class="invalid-feedback">
+                                        Please provide a surname!
+                                    </div>
                                 </div>
                         </div>
                         <!-- row Email-->
@@ -59,6 +65,9 @@
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput3" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="name@example.com">
+                                    <div class="invalid-feedback">
+                                        Please provide en email.
+                                      </div>
                                 </div>
                         </div>
                         <!-- row Tipo di Lavoro-->
@@ -83,6 +92,9 @@
                             <div class="mb-3">
                                 <label for="exampleFormControlInput6" class="form-label">Textarea con Bootstrap5</label>
                                 <textarea class="form-control" id="exampleFormControlInput6" rows="3" placeholder="Inserisci eventuali note"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter a message in the textarea!
+                                </div>
                             </div>
                         </div>
                         <!-- row Promozione-->
@@ -101,8 +113,11 @@
                         <!-- row Privacy Policy-->
                         <div class="row">
                             <div class="mb-3">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Accetto la Privacy Policy</label>
+                                <input type="checkbox" class="form-check-input" id="exampleFormControlInput7">
+                                <label class="form-check-label" for="exampleFormControlInput7">Accetto la Privacy Policy</label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting!
+                                </div>
                             </div>
                         </div>
                         <!-- usando class row per mandare a capo il Prezzo finale per lo schermo sm-->
@@ -113,8 +128,8 @@
                                     <button id="submit-form" type="submit" class="btn btn-primary">Calcola preventivo</button>
                                 </div>
                                 <div class="col-sm-3 mb-3 mt-sm-3">
-                                    <p><b>Prezzo finale</b><br>
-                                      <span id="finalPrice"></span> &euro;
+                                    <p><b>Prezzo finale<br>
+                                      <span id="finalPrice"></span> &euro;</b>
                                     </p>
                                 </div>
                             </div>
