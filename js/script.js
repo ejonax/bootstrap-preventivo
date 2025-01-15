@@ -114,7 +114,7 @@ sButton.addEventListener('click', function(event) {
    // il valore inserito sull'input Textarea
    const textareaInput=document.querySelector("#exampleFormControlInput6");
    const textareaInputValue=textareaInput.value;
-   console.log(textareaInputValue);
+   //console.log(textareaInputValue);
 
    if (textareaInputValue.length==0){
         textareaInput.classList.remove('is-valid');
@@ -165,7 +165,7 @@ sButton.addEventListener('click', function(event) {
     let finalPrize = 0.00 ;
     finalPrize=finalPrize.toFixed(2);
     //console.log(finalPrize);
-    const workingHours = 10;
+    const workingHours = 10;//come nella traccia
 
     /*
     console.log(!(nomeInputValue.length==0));
