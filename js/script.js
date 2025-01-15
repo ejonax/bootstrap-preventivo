@@ -6,10 +6,10 @@ document.getElementById("dateYear").innerHTML = "&#169; "+d.getFullYear()+" - Tu
 document.getElementById("finalPrice").innerHTML = "0.00";
 
 /**   STEP BONUS JS  **/
-// creamo l'array di oggetti dove ogni oggetto sara composto 
+// creamo l'array di oggetti dove ogni oggetto sara' composto 
 // <option value="value">innerHTML</option>
 // un value che sara il value della option 
-// e di un innerHTML che sara il value che leggera il user
+// e di un innerHTML che sara il value che leggera' il user
 const tipoLavoroList=[
     { value: 0, innerHTML: "Seleziona il tipo di lavoro"},
     { value: 1, innerHTML: "Backed Development"},
@@ -41,7 +41,7 @@ sButton.addEventListener('click', function(event) {
      // il valore inserito sull'input Nome
      const nomeInput=document.querySelector("#exampleFormControlInput1");
      const nomeInputValue=nomeInput.value;
-     console.log(nomeInputValue);
+     //console.log(nomeInputValue);
 
      if (nomeInputValue.length==0){
         nomeInput.classList.remove('is-valid');
@@ -148,6 +148,19 @@ sButton.addEventListener('click', function(event) {
     var isValidPromo=promotionsList.includes(promotionInputValue);
     //console.log(isValidPromo);
 
+    if (isValidPromo){
+        promotionInput.classList.remove('is-invalid');
+        promotionInput.classList.add('is-valid');
+    }else {
+        if(promotionInputValue.length == 0){
+            // se utente non scrive nessun codice di promozione remove-iamo sia valid che non valid per una iterazoione prima
+            promotionInput.classList.remove('is-valid');
+            promotionInput.classList.remove('is-invalid');
+        } else {
+            promotionInput.classList.remove('is-valid');
+            promotionInput.classList.add('is-invalid'); 
+        }  
+    }
 
     let finalPrize = 0.00 ;
     finalPrize=finalPrize.toFixed(2);
@@ -163,7 +176,7 @@ sButton.addEventListener('click', function(event) {
     console.log(privacyInputValue);
     */
     
-
+    //se tutti i campi del form sono compilati tranne la promozione
     if (!(nomeInputValue.length==0) &&
         !(cognomeInputValue.length==0) &&
          (emailPattern.test(emailInputValue)) &&
@@ -171,26 +184,16 @@ sButton.addEventListener('click', function(event) {
         !(textareaInputValue.length==0) &&
           privacyInputValue
     ){
-        // la logica principale per calcolare il prezzo
+          // la logica principale per calcolare il prezzo
         if (isValidPromo){
-            promotionInput.classList.remove('is-invalid');
-            promotionInput.classList.add('is-valid');
             const discount=0.25;
             finalPrize=workingHours*priceHour*0.75;
         } else {
-            if(promotionInputValue.length == 0){
-                // se utente non scrive nessun codice di promozione remove-iamo sia valid che non valid per una iterazoione prima
-                promotionInput.classList.remove('is-valid');
-                promotionInput.classList.remove('is-invalid');
-            } else {
-                promotionInput.classList.remove('is-valid');
-                promotionInput.classList.add('is-invalid'); 
-            }  
             finalPrize=workingHours*priceHour;
         }
         //formatiamo con 2 decimali
         finalPrize=finalPrize.toFixed(2);
-        console.log(finalPrize);
+        //console.log(finalPrize);
     
     }
         //il prezzo finale la stampiamo sulla <span> lato html
